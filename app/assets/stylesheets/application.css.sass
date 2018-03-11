@@ -1,0 +1,10 @@
+/* 
+ * application.css.scss
+ *= require_self
+*/  
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+template = File.read("foundation.scss")
+sass_engine = Sass::Engine.new(template, :syntax => :scss)
+sass_output = sass_engine.render
